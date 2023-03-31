@@ -11,6 +11,8 @@ private:
 
 public:
 
+    std::string fildepath;
+
     double system_size; //!< Length of the system in (fm). 
     double dx; //!< spatial increment (fm).
     double t_eq; //!< Total duration of the equilibration in (fm).
@@ -55,7 +57,7 @@ public:
     std::string filemuQ; //!< Name of the file containing values of muQ from HRG EoS inversion. 
     std::string filemuS; //!< Name of the file containing values of muS from HRG EoS inversion. 
 
-    std::string species_file_name; //!< Name of the file containing hadronic species properties. 
+    std::string HRGspecies_file_name; //!< Name of the file containing hadronic species properties. 
 
     std::string kBBfile; //!< Path of the file containing kappa values and coords fpr GPU.
     std::string kBQfile;
@@ -211,6 +213,7 @@ public:
 
     Parameters();
     bool load(std::string file);
+    void read();
     template<typename T>
     void extract(std::string name, T &val) const;
     template<typename T>
