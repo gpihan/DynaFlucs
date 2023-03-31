@@ -187,6 +187,11 @@ void Parameters::read(){
     extract("EvRawDataStartSteps", EvRawDataStartSteps);
     extract("EqRawDataStopSteps", EqRawDatatopSteps);
     extract("EvRawDataStopSteps", EvRawDatatopSteps);
+
+    extract("turn_on_B", turn_on_B);
+    extract("turn_on_Q", turn_on_Q);
+    extract("turn_on_S", turn_on_S);
+    extract("TryObservablesOnGPUMemory", TryObservablesOnGPUMemory);
 }
 
 bool Parameters::load(std::string file) {

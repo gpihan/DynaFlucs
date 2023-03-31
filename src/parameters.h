@@ -206,6 +206,14 @@ public:
     double EvRawDataStop; //!< Stop recording data from this time in the evolution (fm).
     int EqRawDataStopSteps; //!< Stop recording data from this timestep in the equilibration.
     int EvRawDataStopSteps; //!< Stop recording data from this timestep in the evolution.
+			    
+
+    bool turn_on_B;
+    bool turn_on_Q;
+    bool turn_on_S;
+
+    bool TryObservablesOnGPUMemory;
+
     //flag to know what conserved charge are calculated.
     // flag record on CPU of GPU for large of small files (if files are small, only one communication with CPU at the end of the evolution).
     // estimation de la memoire requise compared to memoire GPU disponible (il faut aussi les data tabulees et autre vex vector)

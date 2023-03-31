@@ -1,0 +1,253 @@
+####################################
+#                                  # 
+# Dynaflucs Default parameter file #
+#                                  #
+####################################
+
+###################################
+#       General parameters        #
+###################################
+
+system_size=20 
+dx=0.15625 
+nc=0.333333333 
+xi0=0.48 
+Ncell=128
+nbsimulation=1000;
+UseExpansion=1;
+folderName=simulation1;
+
+### Rapidity window for integrated observables
+RapidityWindow=1
+RapidityWindowSteps=15
+
+turn_on_B=1
+turn_on_Q=0
+turn_on_S=0
+TryObservablesOnGPUMemory=1
+
+###################################
+#       Initial conditions        #
+###################################
+
+WhenInit=1;
+InitialConditionsMode=0;
+
+# From a file
+InitialConditionsB_Filename=parameters/initial_conditions/Initial_B.dat
+InitialConditionsQ_Filename=parameters/initial_conditions/Initial_Q.dat
+InitialConditionsS_Filename=parameters/initial_conditions/Initial_S.dat
+
+######## Gaussian 
+meanB=0
+meanQ=0
+meanS=0
+sigmaB=1
+sigmaQ=1
+sigmaS=1
+
+######## Double Gaussian 
+meanBA=-1
+meanQA=-1
+meanSA=-1
+sigmaBA=0.5
+sigmaQA=0.5
+sigmaSA=0.5
+meanBB=1
+meanQB=1
+meanSB=1
+sigmaBB=0.5
+sigmaQB=0.5
+sigmaSB=0.5
+
+######### Constant
+InitValueB=0
+InitValueQ=0
+InitValueS=0
+
+###################################
+#         equilibration           #
+###################################
+
+t_eq=100
+dtEq=0.01
+a_eq=0.2
+T_eq=0.16
+timestepEq=10000
+
+######### Observables
+
+### Correlation functions
+ComputeCorrelationFunctionEq=1
+CorrelationfileEq=CorrelationEq
+EqCorrelationEvery=0.05
+EqCorrelationEverySteps=100
+EqCorrelationStart=8
+EqCorrelationStop=10
+EqCorrelationStartSteps=8000
+EqCorrelationStopSteps=10000
+
+### Covariances
+ComputeCovariancesFunctionEq=1
+CovariancesfileEq=CovariancesEq
+EqCovariancesEvery=0.01
+EqCovariancesEverySteps=20
+EqCovariancesStart=8
+EqCovariancesStop=10
+EqCovariancesStartSteps=8000
+EqCovariancesStopSteps=10000
+
+### StrucutreFactor
+ComputeStructureFactorFunctionEq=1
+StructureFactorfileEq=Sk
+EqStructureFactorEvery=0.1
+EqStructureFactorEverySteps=200
+EqStructureFactorStart=8
+EqStructureFactorStop=10
+EqStructureFactorStartSteps=8000
+EqStructureFactorStopSteps=10000
+
+### Integrated Covariances
+ComputeIntegratedCovariancesFunctionEq=1
+IntegratedCovariancesfileEq=Covariances
+EqIntegratedCovariancesEvery=0.01
+EqIntegratedCovariancesEverySteps=20
+EqIntegratedCovariancesStart=8
+EqIntegratedCovariancesStop=10
+EqIntegratedCovariancesStartSteps=8000
+EqIntegratedCovariancesStopSteps=10000
+
+### Averages (Be aware that it may generate extremely large files)
+ComputeAveragesFunctionEq=0
+AveragesfileEq=Averages
+EqAveragesEvery=0.1
+EqAveragesEverySteps=200
+EqAveragesStart=8
+EqAveragesStop=10
+EqAveragesStartSteps=8000
+EqAveragesStopSteps=10000
+
+### Raw data (Be aware that it may generate extremely large files)
+ComputeRawDataFunctionEq=0
+RawDatafileEq=Density
+EqRawDataEvery=0.1
+EqRawDataEverySteps=200
+EqRawDataStart=8
+EqRawDataStop=10
+EqRawDataStartSteps=8000
+EqRawDataStopSteps=10000
+
+###################################
+#           evolution             #
+###################################
+
+t_ev=100
+tau_init=1
+tau0=1
+dtEv=0.01
+a_ev=0.2
+T_ev=0.16
+timestepEv=10000
+
+######### Observables
+
+### Correlation function
+ComputeCorrelationFunctionEv=1
+CorrelationfileEv=CorrelationEv
+EvCorrelationEvery=0.05
+EvCorrelationEverySteps=100
+EvCorrelationStart=8
+EvCorrelationStop=10
+EvCorrelationStartSteps=8000
+EvCorrelationStopSteps=10000
+
+### Covariances
+ComputeCovariancesFunctionEv=1
+CovariancesfileEv=CovariancesEv
+EvCovariancesEvery=0.01
+EvCovariancesEverySteps=20
+EvCovariancesStart=8
+EvCovariancesStop=10
+EvCovariancesStartSteps=8000
+EvCovariancesStopSteps=10000
+
+### StrucutreFactor
+ComputeStructureFactorFunctionEv=1
+StructureFactorfileEv=Sk
+EvStructureFactorEvery=0.1
+EvStructureFactorEverySteps=200
+EvStructureFactorStart=8
+EvStructureFactorStop=10
+EvStructureFactorStartSteps=8000
+EvStructureFactorStopSteps=10000
+
+### Integrated Covariances
+ComputeIntegratedCovariancesFunctionEv=1
+IntegratedCovariancesfileEv=Covariances
+EvIntegratedCovariancesEvery=0.01
+EvIntegratedCovariancesEverySteps=20
+EvIntegratedCovariancesStart=8
+EvIntegratedCovariancesStop=10
+EvIntegratedCovariancesStartSteps=8000
+EvIntegratedCovariancesStopSteps=10000
+
+### Averages (Be aware that it may generate extremely large files).
+ComputeAveragesFunctionEq=0
+AveragesfileEv=Averages
+EvAveragesEvery=0.1
+EvAveragesEverySteps=200
+EvAveragesStart=8
+EvAveragesStop=10
+EvAveragesStartSteps=8000
+EvAveragesStopSteps=10000
+
+### Raw data (Be aware that it may generate extremely large files)
+ComputeRawDataFunctionEv=0
+RawDatafileEv=Density
+EvRawDataEvery=0.1
+EvRawDataEverySteps=200
+EvRawDataStart=8
+EvRawDataStop=10
+EvRawDataStartSteps=8000
+EvRawDataStopSteps=10000
+
+###################################
+#         thermodynamics          #
+###################################
+
+m2File=parameters/thermodynamics/m2.dat
+filemuB=parameters/thermodynamics/muB.dat
+filemuQ=parameters/thermodynamics/muQ.dat
+filemuS=parameters/thermodynamics/muS.dat
+HRGspecies_file_name=parameters/thermodynamics/HRGSpecies.dat;
+
+## Kappa matrix
+kBBfile=parameters/thermodynamics/kBB.dat
+kBQfile=parameters/thermodynamics/kBQ.dat
+kBSfile=parameters/thermodynamics/kBS.dat
+kQQfile=parameters/thermodynamics/kQQ.dat
+kQSfile=parameters/thermodynamics/kQS.dat
+kSSfile=parameters/thermodynamics/kSS.dat
+cBBfile=parameters/thermodynamics/cBB.dat
+cBQfile=parameters/thermodynamics/cBQ.dat
+cBSfile=parameters/thermodynamics/cBS.dat
+cQQfile=parameters/thermodynamics/cQQ.dat
+cQSfile=parameters/thermodynamics/cQS.dat
+cSSfile=parameters/thermodynamics/cSS.dat
+
+chiBBfile=parameters/thermodynamics/chiBB.dat
+chiQQfile=parameters/thermodynamics/chiQQ.dat
+chiSSfile=parameters/thermodynamics/chiSS.dat
+chiBQfile=parameters/thermodynamics/chiBQ.dat
+chiBSfile=parameters/thermodynamics/chiBS.dat
+chiQBfile=parameters/thermodynamics/chiQB.dat
+chiQSfile=parameters/thermodynamics/chiQS.dat
+chiSBfile=parameters/thermodynamics/chiSB.dat
+chiSQfile=parameters/thermodynamics/chiSQ.dat
+
+EquilibrationScheme=0
+EvolutionScheme=0
+
+TemperatureProfile=0;
+TemperatureProfileName=parameters/thermodynamics/temperature.dat;
+dcs2=1
